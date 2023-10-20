@@ -10,9 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-from pathlib import Path
-from dotenv import load_dotenv
 import os
+from pathlib import Path
+
+from dotenv import load_dotenv
 
 load_dotenv()
 
@@ -29,21 +30,16 @@ SECRET_KEY = os.getenv('SK')
 DEBUG = False
 
 ALLOWED_HOSTS = [
-  'localhost', '127.0.0.1'
+  'localhost', '127.0.0.1', 'https://editing.onrender.com/'
   
 ]
 
-CSRF_TRUSTED_ORIGINS = [
-  'http://127.0.0.1', 'http://localhost'
+CORS_ALLOW_ORIGINS = [
+  'https://editing.onrender.com', 'http://localhost:8000', 'http://127.0.0.1:8000'
 ]
 
-CORS_ALLOW_METHODS = [
-  "DELETE",
-  "GET",
-  "OPTIONS",
-  "PATCH",
-  "POST",
-  "PUT",
+CSRF_TRUSTED_ORIGINS = [
+  'http://127.0.0.1', 'http://localhost', 'https://editing.onrender.com'
 ]
 
 # Application definition
