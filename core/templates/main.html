@@ -1,0 +1,272 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Homepage{% endblock %}
+
+{% block styles %}
+<style>
+  .cta-btns{
+    margin-top: 2rem;
+  }
+  .about-introduction{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+  }
+  .about-video-introduction{
+    /* width: 65vw; */
+    margin: 0 auto;
+    transition: .3s;
+  }
+</style>
+{% endblock %}
+
+{% block content %}
+    <section class="hero">
+		<video autoplay muted loop>
+			<source src="{% static 'fp.webm' %}" type="video/webm">
+		</video>
+		<img src="{% static 'vegaspro.png' %}" alt="Vegas" id="vegas">
+		<img src="{% static 'JavaScript.png' %}" alt="JavaScript" id="js">
+		<div class="hero-txt">
+			<h1>Video Editor</h1>
+			<p>Francisco A.</p>
+      <div class="cta-btns">
+			 <a href="#about" class="cta">Learn More</a>
+       <a href="#packages-list" class="cta">Packages</a> 
+      </div>
+		</div>
+	</section>
+
+	<section id="about">
+		<h1 class="glitch" id="who" data-text="Who am I?"><span>Who am I?</span></h1>
+
+		<div class="about-introduction" id="me">
+			<div class="about-video-introduction">
+				<!-- <img src="{% static 'me.jpg' %}" alt="Francisco Abalos"> -->
+        <video controls>
+          <source src="{% static 'new reel website.webm' %}" type="video/webm">
+        </video>
+			</div>
+
+			<div class="about-r">
+				<p>Hi, welcome to my <b>video editing</b> gig. I'm an editor skilled in <b>Vegas Pro</b>, software I use to create captivating videos.</p>
+
+				<a href="{% url 'contact' %}" class="btn">Contact me <i class="fa-regular fa-face-smile-beam"></i></a>
+			</div>
+		</div>
+
+		<div class="about">
+			<div class="about-l">
+				<video id="herod" title="twitch.tv/herod [ ES ]" autoplay muted loop>
+					<source src="{% static 'heroclip.mp4' %}" type="video/mp4">
+				</video>
+			</div>
+			<div class="about-r">
+				<p>My attention to detail and creative flair have helped me deliver <b>high-quality work</b> that my clients <b>love</b>.</p>
+				<a href="{% url 'contact' %}" class="btn">Contact me <i class="fa-regular fa-face-smile-beam"></i></a>
+			</div>
+		</div>
+
+    <div class="about">
+			<div class="about-l">
+				<video autoplay muted loop>
+					<source src="{% static 'cashcow.webm' %}" type="video/webm">
+				</video>
+			</div>
+
+			<div class="about-r">
+				<p>I can do <b>CashCow</b>, <b>Automation Videos</b>, <b>Faceless</b>.</p>
+				<a href="{% url 'contact' %}" class="btn">Contact me <i class="fa-regular fa-face-smile-beam"></i></a>
+			</div>
+		</div>
+
+    <div class="about">
+			<div class="about-l">
+				<video id="herod" title="9:16 Shorts" autoplay muted loop>
+					<source src="{% static 'shorts showreel.mp4' %}" type="video/mp4">
+				</video>
+			</div>
+			<div class="about-r">
+				<p>I also <b>do short form</b> content, such as <b>youtube shorts</b>, <b>tik toks</b>, <b>instagram reels</b>, etc.</p>
+				<a href="{% url 'contact' %}" class="btn">Contact me <i class="fa-regular fa-face-smile-beam"></i></a>
+			</div>
+		</div>
+
+		<div class="about">
+			<div class="about-l">
+				<video autoplay muted loop>
+					<source src="{% static 'skins.mov' %}" type="video/mp4">
+				</video>
+			</div>
+			<div class="about-r">
+				<p>I've <b title="Fiverr">freelanced</b> before, creating <b>short ads</b> for <b>businesses</b> and also i've worked with <b>small livestreamers</b>.</p>
+				<a href="{% url 'contact' %}" class="btn">Contact me <i class="fa-regular fa-face-smile-beam"></i></a>
+			</div>
+		</div>
+
+		<div class="about">
+			<div class="about-l">
+				<video autoplay muted loop>
+					<source src="{% static 'WEBDEVELOPER.webm' %}" type="video/webm">
+				</video>
+			</div>
+
+			<div class="about-r">
+				<p>In addition to video editing, I have <b>1.5 years of experience</b> in web development. I love combining my skills to create visually stunning content for my clients.</p>
+				<a href="{% url 'contact' %}" class="btn">Contact me <i class="fa-regular fa-face-smile-beam"></i></a>
+			</div>
+		</div>
+
+		<div class="contactme">
+				<p>Overall, I'm a versatile and <b>passionate</b> video editor who's always willing to explore new tools and techniques.</p>
+				<!-- <a href="#" class="btn">Contact me <i class="fa-regular fa-face-smile-beam"></i></a> -->
+		</div>
+	</section>
+
+<!-- packages -->
+
+	<i id="packages-list" class="title-icon fa-solid fa-store"></i>
+	<h3 class="small-title glitch" data-text="Packages">Packages</h3>
+
+	<section class="packages">
+		<div class="package">
+			
+			<div class="package-stars">
+				<i class="fa-solid fa-star"></i>
+			</div>
+
+			<ul>
+				<li><span>Price:</span> $25</li>
+				<li><span>Runtime:</span> 10 Min</li>
+				<li>Memes</li>
+				<li title="Sound Effects">SFX</li>
+				<li title="Background Music">BGM</li>
+				<li>Text / Captions</li>
+        <li>Transitions</li>
+        <li>B-Roll</li>
+        <li>All aspect ratios</li>
+        <li>Delivery in 48 Hours</li>
+			</ul>
+
+		</div>
+
+		<div class="package">
+			
+			<div class="package-stars">
+				<i class="fa-solid fa-star"></i>
+				<i class="fa-solid fa-star"></i>
+			</div>
+
+      <ul>
+				<li><span>Price:</span> $40</li>
+				<li><span>Runtime:</span> 12 Min</li>
+				<li>Memes</li>
+				<li title="Sound Effects">SFX</li>
+				<li title="Background Music">BGM</li>
+				<li>Text / Captions</li>
+        <li>Transitions</li>
+        <li>B-Roll</li>
+        <li>Motion Graphics</li>
+        <li>Color Grading / LUTs</li>
+        <li>All aspect ratios</li>
+        <li>Delivery in 72 Hours</li>
+			</ul>
+
+		</div>
+
+		<div class="package">
+			
+			<div class="package-stars">
+				<i class="fa-solid fa-star"></i>
+				<i class="fa-solid fa-star"></i>
+				<i class="fa-solid fa-star"></i>
+			</div>
+
+			<ul>
+				<li><span>Price:</span> $75</li>
+				<li><span>Runtime:</span> up to 25 Min</li>
+        <li>Memes</li>
+				<li title="Sound Effects">SFX</li>
+				<li title="Background Music">BGM</li>
+				<li>Text / Captions</li>
+        <li>Transitions</li>
+        <li>B-Roll</li>
+        <li>Same as <i class="fa-solid fa-star"></i> <i class="fa-solid fa-star"></i> but longer</li>
+        <li>Delivery in 10 days</li>
+			</ul>
+
+		</div>
+	</section>
+
+  <div class="links-b">
+  	<a href="{% url 'contact' %}" class="btn middle-cta" style="margin: 0;">Contact Me</a>
+    <a href="https://drive.google.com/drive/folders/1i3DB153ADZXgTaoDx0vh1NflTYUdCMU6?usp=sharing"  class="btn middle-cta" style="margin: 0;">Samples</a>
+  </div>
+
+<!--     workflow     -->
+  <section class="workflow" style="margin-top: 5rem;">
+    <div id="workflow-section" class="fa-solid fa-list-check title-icon"></div>
+		<h1 class="who glitch" data-text="My Workflow">My Workflow</h1>
+
+		<ul class="workflow-items">
+			<li>
+				<h2>1</h2>
+				<h3>Initial consultation</h3>
+				<p>
+					We'll discuss your <b>project needs</b>, <b>goals</b>, <b>timeline</b>, and <b>budget</b> to ensure we're on the same page.
+				</p>
+				<i class="fa-sharp fa-regular fa-message flicker"></i>
+			</li>
+
+			<li>
+				<h2>2</h2>
+				<h3>Footage delivery</h3>
+				<p>
+					Once we've agreed to work together, you'll <b>send me</b> the raw <b>footage</b> for your project. We can <b>transfer files</b> using a cloud service or other secure method.
+				</p>
+				<i class="fa-brands fa-google-drive"></i>
+			</li>
+
+			<li>
+				<h2>3</h2>
+				<h3>Creative development</h3>
+				<p>
+					I'll <b>review</b> the footage and work with you to develop a creative direction for the project, taking into account your <b>brand, audience, and message</b>.
+				</p>
+				<i class="fa-regular fa-pen-to-square"></i>
+			</li>
+
+			<li>
+				<h2>4</h2>
+				<h3>First draft</h3>
+				<p>
+					Based on the creative direction we've established, I'll <b>create a first draft</b> of the video for your review. You can provide feedback and we'll work together to refine the project until it <b>meets your standards</b>.
+				</p>
+				<i class="fa-solid fa-film flicker"></i>
+			</li>
+
+			<li>
+				<h2>5</h2>
+				<h3>Final edits</h3>
+				<p>
+					Once you're <b>happy with</b> the video, I'll make final edits and <b>send you the finished product</b>. If necessary, we can make additional tweaks or changes until the video is perfect.
+				</p>
+				<i class="fa-solid fa-right-left "></i>
+			</li>
+
+			<li>
+				<h2>6</h2>
+				<h3>Delivery</h3>
+				<p>
+					I'll <b>send you</b> the <b>final video</b> in the format and resolution you require. If needed, I can also provide the source file/s (.veg, .sfk). 
+				</p>
+				<i class="fa-regular fa-handshake flicker"></i>
+			</li>
+		</ul>
+	</section>
+
+
+{% endblock content %}
